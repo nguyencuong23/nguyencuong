@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Việt Nam: Lịch Sử Không Biên Giới</title>
+    <link rel="stylesheet" href="http://localhost:5500/CSS/Style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="http://localhost:5500/JS/user.js"></script>
+    <script src="http://localhost:5500/JS/Script.js"></script>
+  </head>
+  <body>
+    <div class="head">
+      <a href="http://localhost:5500/HTML/Home.html" class="link-logo">
+        <span class="logo">Cường Thành</span>
+        <span class="logo books">Books</span>
+      </a>
+      <div class="head-menu">
+        <a href="http://localhost:5500/HTML/Home.html" class="link-icon">
+          <i class="fa-solid fa-house-chimney"></i>
+          Trang chủ
+        </a>
+        <a
+          href="http://localhost:5500/HTML/Login.html"
+          class="link-icon"
+          id="user-account"
+        >
+          <i class="fa-solid fa-user"></i>
+          Tài khoản
+        </a>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const userAccount = document.getElementById("user-account");
+            const username = localStorage.getItem("username");
+            if (username) {
+              userAccount.innerHTML = `
+                <div class="user-dropdown">
+                  <a href="#" class="link-icon" id="user-name">
+                    <i class="fa-solid fa-user"></i> ${username}
+                  </a>
+                  <div class="dropdown-account" id="dropdown-account">
+                    <a href="#" id="logout">Đăng xuất</a>
+                    <a href="http://localhost:5500/HTML/Cart.html" id="cart2">Giỏ hàng</a>
+                  </div>
+                </div>
+              `;
+              document
+                .getElementById("user-name")
+                .addEventListener("click", function (event) {
+                  event.preventDefault();
+                  const dropdownAccount =
+                    document.getElementById("dropdown-account");
+                  dropdownAccount.classList.toggle("show-menu");
+                });
+              document
+                .getElementById("logout")
+                .addEventListener("click", function (event) {
+                  event.preventDefault();
+                  localStorage.removeItem("username");
+                  userAccount.innerHTML = `
+                    <a href="http://localhost:5500/HTML/Login.html" class="link-icon">
+                      <i class="fa-solid fa-user"></i> Đăng nhập
+                    </a>
+                  `;
+                });
+            }
+          });
+        </script>
+      </div>
+    </div>
+    <hr class="headhr" />
+    <div class="content">
+      <div class="link-sp">
+        <a href="http://localhost:5500/HTML/Home.html">Trang chủ</a>
+        <p>&ensp;>&ensp;</p>
+        <a href="http://localhost:5500/HTML/STV.html">Sách Tiếng Việt</a>
+        <p>&ensp;>&ensp;</p>
+        <a href="http://localhost:5500/HTML/STV/SachLichSu.html">
+          Sách Lịch Sử
+        </a>
+        <p>&ensp;>&ensp;</p>
+        <p>Việt Nam: Lịch Sử Không Biên Giới</p>
+      </div>
+      <div class="ctsp">
+        <aside class="img-tsp">
+          <img src="http://localhost:5500/Image/SP/17.webp" alt="" />
+        </aside>
+        <main id="main">
+          <div class="tsp">
+            <h3>Việt Nam: Lịch Sử Không Biên Giới</h3>
+            <p>Tác giả: OMEGA</p>
+            <h2>
+              291.000 <sup><u>đ</u></sup>
+            </h2>
+            <p id="soldCount17" class="sCount">Đã bán: 0</p>
+          </div>
+          <div class="tsp">
+            <h3>Thông tin chi tiết</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="top">Công ty phát hành</td>
+                  <td class="top">Omega Plus</td>
+                </tr>
+                <tr>
+                  <td>Ngày xuất bản</td>
+                  <td>27-08-2024</td>
+                </tr>
+                <tr>
+                  <td>Kích thước</td>
+                  <td>16 x 24 cm</td>
+                </tr>
+                <tr>
+                  <td>Loại bìa</td>
+                  <td>Bìa mềm</td>
+                </tr>
+                <tr>
+                  <td>Số trang</td>
+                  <td>488</td>
+                </tr>
+                <tr>
+                  <td>Nhà xuất bản</td>
+                  <td>Nhà Xuất Bản Khoa Học Xã Hội</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tsp">
+            <h3>Mô tả sản phẩm</h3>
+            <p>
+              “Việt Nam: Lịch sử không biên giới” như một cuộc đối thoại quốc tế
+              về Việt Nam giữa những nhà sử học ở Việt Nam, Trung Quốc, Nhật
+              Bản, Hàn Quốc, Úc, Hoa Kỳ. Cuốn sách quy tụ các bài tham luận của
+              các nhà Việt Nam học lừng danh trên thế giới tại hội thảo “Việt
+              Nam: bên ngoài những đường biên” tháng 5/2001, mở ra những tri
+              thức sâu và mới mẻ về sự tương tác giữa bản sắc Việt Nam - Chăm -
+              Khmer - Pháp, trên bán đảo Đông Dương trong hơn 1000 năm.
+            </p>
+            <br />
+            <p>
+              Hiếm có nền sử học nào lại mang dấu ấn dân tộc đậm nét như sử học
+              về Việt Nam trong thế kỷ XX. Gia nhập trận chiến cam go vì sinh
+              tồn và bản sắc dân tộc suốt phần lớn thế kỷ này.
+            </p>
+          </div>
+        </main>
+        <aside class="buy">
+          <button class="buy-button" data-id="17">Mua hàng</button>
+          <button class="cart-button" onclick="addToCart(17)">
+            Thêm vào giỏ hàng
+          </button>
+        </aside>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <h3>Công Ty TNHH Cường Thành</h3>
+    <br />
+    <p>Tòa nhà 123, Phường ABC, Quận XYZ, Thành phố Hà Nội</p>
+    <br />
+    <p>
+      Giấy chứng nhận đăng ký doanh nghiệp số 0309544917 do Sở Kế Hoạch và Đầu
+      Tư Hà Nội cấp lần đầu vào ngày 17/10/2024
+    </p>
+    <br />
+    <p>Hotline: 1900 1234</p>
+  </footer>
+</html>

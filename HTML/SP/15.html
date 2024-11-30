@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bố Già</title>
+    <link rel="stylesheet" href="http://localhost:5500/CSS/Style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="http://localhost:5500/JS/user.js"></script>
+    <script src="http://localhost:5500/JS/Script.js"></script>
+  </head>
+  <body>
+    <div class="head">
+      <a href="http://localhost:5500/HTML/Home.html" class="link-logo">
+        <span class="logo">Cường Thành</span>
+        <span class="logo books">Books</span>
+      </a>
+      <div class="head-menu">
+        <a href="http://localhost:5500/HTML/Home.html" class="link-icon">
+          <i class="fa-solid fa-house-chimney"></i>
+          Trang chủ
+        </a>
+        <a
+          href="http://localhost:5500/HTML/Login.html"
+          class="link-icon"
+          id="user-account"
+        >
+          <i class="fa-solid fa-user"></i>
+          Tài khoản
+        </a>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const userAccount = document.getElementById("user-account");
+            const username = localStorage.getItem("username");
+            if (username) {
+              userAccount.innerHTML = `
+                <div class="user-dropdown">
+                  <a href="#" class="link-icon" id="user-name">
+                    <i class="fa-solid fa-user"></i> ${username}
+                  </a>
+                  <div class="dropdown-account" id="dropdown-account">
+                    <a href="#" id="logout">Đăng xuất</a>
+                    <a href="http://localhost:5500/HTML/Cart.html" id="cart2">Giỏ hàng</a>
+                  </div>
+                </div>
+              `;
+              document
+                .getElementById("user-name")
+                .addEventListener("click", function (event) {
+                  event.preventDefault();
+                  const dropdownAccount =
+                    document.getElementById("dropdown-account");
+                  dropdownAccount.classList.toggle("show-menu");
+                });
+              document
+                .getElementById("logout")
+                .addEventListener("click", function (event) {
+                  event.preventDefault();
+                  localStorage.removeItem("username");
+                  userAccount.innerHTML = `
+                    <a href="http://localhost:5500/HTML/Login.html" class="link-icon">
+                      <i class="fa-solid fa-user"></i> Đăng nhập
+                    </a>
+                  `;
+                });
+            }
+          });
+        </script>
+      </div>
+    </div>
+    <hr class="headhr" />
+    <div class="content">
+      <div class="link-sp">
+        <a href="http://localhost:5500/HTML/Home.html">Trang chủ</a>
+        <p>&ensp;>&ensp;</p>
+        <a href="http://localhost:5500/HTML/STV.html">Sách Tiếng Việt</a>
+        <p>&ensp;>&ensp;</p>
+        <a href="http://localhost:5500/HTML/STV/SachLichSu.html">
+          Sách Lịch Sử
+        </a>
+        <p>&ensp;>&ensp;</p>
+        <p>Bố Già</p>
+      </div>
+      <div class="ctsp">
+        <aside class="img-tsp">
+          <img src="http://localhost:5500/Image/SP/15.webp" alt="" />
+        </aside>
+        <main id="main">
+          <div class="tsp">
+            <h3>Bố Già</h3>
+            <p>Tác giả: MARIO PUZO</p>
+            <h2>
+              145.000 <sup><u>đ</u></sup>
+            </h2>
+            <p id="soldCount15" class="sCount">Đã bán: 0</p>
+          </div>
+          <div class="tsp">
+            <h3>Thông tin chi tiết</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="top">Công ty phát hành</td>
+                  <td class="top">Đông Á</td>
+                </tr>
+                <tr>
+                  <td>Ngày xuất bản</td>
+                  <td>07-07-2022</td>
+                </tr>
+                <tr>
+                  <td>Kích thước</td>
+                  <td>14 x 20.5 cm</td>
+                </tr>
+                <tr>
+                  <td>Loại bìa</td>
+                  <td>Bìa mềm</td>
+                </tr>
+                <tr>
+                  <td>Số trang</td>
+                  <td>364</td>
+                </tr>
+                <tr>
+                  <td>Nhà xuất bản</td>
+                  <td>Nhà Xuất Bản Văn Học</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tsp">
+            <h3>Mô tả sản phẩm</h3>
+            <p>
+              Thế giới ngầm được phản ánh trong tiểu thuyết Bố già là sự gặp gỡ
+              giữa một bên là ý chí cương cường và nền tảng gia tộc chặt chẽ
+              theo truyền thống mafia xứ Sicily với một bên là xã hội Mỹ nhập
+              nhằng đen trắng, mảnh đất màu mỡ cho những cơ hội làm ăn bất chính
+              hứa hẹn những món lợi kếch xù.
+            </p>
+            <br />
+            <p>
+              Trong thế giới ấy, hình tượng Bố già được tác giả dày công khắc
+              họa đã trở thành bức chân dung bất hủ trong lòng người đọc. Từ một
+              kẻ nhập cư tay trắng đến ông trùm tột đỉnh quyền uy, Don Vito
+              Corleone là con rắn hổ mang thâm trầm, nguy hiểm khiến kẻ thù phải
+              kiềng nể, e dè, nhưng cũng được bạn bè, thân quyến xem như một
+              đấng toàn năng đầy nghĩa khí.
+            </p>
+          </div>
+        </main>
+        <aside class="buy">
+          <button class="buy-button" data-id="15">Mua hàng</button>
+          <button class="cart-button" onclick="addToCart(15)">
+            Thêm vào giỏ hàng
+          </button>
+        </aside>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <h3>Công Ty TNHH Cường Thành</h3>
+    <br />
+    <p>Tòa nhà 123, Phường ABC, Quận XYZ, Thành phố Hà Nội</p>
+    <br />
+    <p>
+      Giấy chứng nhận đăng ký doanh nghiệp số 0309544917 do Sở Kế Hoạch và Đầu
+      Tư Hà Nội cấp lần đầu vào ngày 17/10/2024
+    </p>
+    <br />
+    <p>Hotline: 1900 1234</p>
+  </footer>
+</html>

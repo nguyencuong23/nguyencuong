@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="../CSS/Style.css" />
+    <link rel="stylesheet" href="../CSS/Account.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="http://localhost:5500/JS/user.js"></script>
+    <script src="http://localhost:5500/JS/Login.js"></script>
+  </head>
+  <body>
+    <body>
+      <div class="head">
+        <a href="./Home.html" class="link-logo">
+          <span class="logo">Cường Thành</span>
+          <span class="logo books">Books</span>
+        </a>
+        <div class="head-menu">
+          <a href="./Home.html" class="link-icon">
+            <i class="fa-solid fa-house-chimney"></i>
+            Trang chủ
+          </a>
+          <a href="./Login.html" class="link-icon">
+            <i class="fa-solid fa-user"></i>
+            Tài khoản
+          </a>
+        </div>
+      </div>
+      <hr class="headhr" />
+      <div class="bg">
+        <div class="register">
+          <h2>Đăng nhập</h2>
+          <br><br>
+          <form id="loginForm">
+            <input type="text" id="username" required placeholder="Tên đăng nhập" class="inp1"/>
+            <br><br>
+            <input type="password" id="password" required class="inp1" placeholder="Mật khẩu"/>
+            <br><br>
+            <button type="submit" class="register login" onclick="login(document.getElementById('username').value)">Đăng nhập</button>
+            <br><br>
+            <a href="./Account.html">Bạn chua có tài khoản? Đăng ký tại đây.</a>
+        </form>
+          <script src="../JS/Login.js"></script>
+        </div>
+      </div>
+  </body>
+</html>
+

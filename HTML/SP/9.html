@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mẹ làm gì có ước mơ</title>
+    <link rel="stylesheet" href="http://localhost:5500/CSS/Style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="http://localhost:5500/JS/user.js"></script>
+    <script src="http://localhost:5500/JS/Script.js"></script>
+  </head>
+  <body>
+    <div class="head">
+      <a href="http://localhost:5500/HTML/Home.html" class="link-logo">
+        <span class="logo">Cường Thành</span>
+        <span class="logo books">Books</span>
+      </a>
+      <div class="head-menu">
+        <a href="http://localhost:5500/HTML/Home.html" class="link-icon">
+          <i class="fa-solid fa-house-chimney"></i>
+          Trang chủ
+        </a>
+        <a
+          href="http://localhost:5500/HTML/Login.html"
+          class="link-icon"
+          id="user-account"
+        >
+          <i class="fa-solid fa-user"></i>
+          Tài khoản
+        </a>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const userAccount = document.getElementById("user-account");
+            const username = localStorage.getItem("username");
+            if (username) {
+              userAccount.innerHTML = `
+                <div class="user-dropdown">
+                  <a href="#" class="link-icon" id="user-name">
+                    <i class="fa-solid fa-user"></i> ${username}
+                  </a>
+                  <div class="dropdown-account" id="dropdown-account">
+                    <a href="#" id="logout">Đăng xuất</a>
+                    <a href="http://localhost:5500/HTML/Cart.html" id="cart2">Giỏ hàng</a>
+                  </div>
+                </div>
+              `;
+              document
+                .getElementById("user-name")
+                .addEventListener("click", function (event) {
+                  event.preventDefault();
+                  const dropdownAccount =
+                    document.getElementById("dropdown-account");
+                  dropdownAccount.classList.toggle("show-menu");
+                });
+              document
+                .getElementById("logout")
+                .addEventListener("click", function (event) {
+                  event.preventDefault();
+                  localStorage.removeItem("username");
+                  userAccount.innerHTML = `
+                    <a href="http://localhost:5500/HTML/Login.html" class="link-icon">
+                      <i class="fa-solid fa-user"></i> Đăng nhập
+                    </a>
+                  `;
+                });
+            }
+          });
+        </script>
+      </div>
+    </div>
+    <hr class="headhr" />
+    <div class="content">
+      <div class="link-sp">
+        <a href="http://localhost:5500/HTML/Home.html">Trang chủ</a>
+        <p>&ensp;>&ensp;</p>
+        <a href="http://localhost:5500/HTML/STV.html">Sách Tiếng Việt</a>
+        <p>&ensp;>&ensp;</p>
+        <a href="http://localhost:5500/HTML/STV/SachVanHoc.html">
+          Sách văn học
+        </a>
+        <p>&ensp;>&ensp;</p>
+        <p>Mẹ làm gì có ước mơ</p>
+      </div>
+      <div class="ctsp" style="height: 520px">
+        <aside class="img-tsp">
+          <img src="http://localhost:5500/Image/SP/9.webp" alt="" />
+          <dl>
+            <dt>Đặc điểm nổi bật</dt>
+            <dd>Thông điệp sâu sắc về tình yêu và hy vọng của mẹ.</dd>
+            <dd>Ngôn ngữ thân thiện, gần gũi và dễ hiểu.</dd>
+            <dd>
+              Hình ảnh và câu chuyện đưa người đọc trở lại ký ức tuổi thơ.
+            </dd>
+          </dl>
+        </aside>
+        <main id="main">
+          <div class="tsp">
+            <h3>Mẹ làm gì có ước mơ</h3>
+            <p>Tác giả: Hạ MER</p>
+            <h2>
+              62.000 <sup><u>đ</u></sup>
+            </h2>
+            <p id="soldCount9" class="sCount">Đã bán: 0</p>
+          </div>
+          <div class="tsp">
+            <h3>Thông tin chi tiết</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="top">Công ty phát hành</td>
+                  <td class="top">Người Trẻ Việt</td>
+                </tr>
+                <tr>
+                  <td>Ngày xuất bản</td>
+                  <td>01-03-2023</td>
+                </tr>
+                <tr>
+                  <td>Kích thước</td>
+                  <td>13 x 20.5 cm</td>
+                </tr>
+                <tr>
+                  <td>Loại bìa</td>
+                  <td>Bìa mềm</td>
+                </tr>
+                <tr>
+                  <td>Số trang</td>
+                  <td>208</td>
+                </tr>
+                <tr>
+                  <td>Nhà xuất bản</td>
+                  <td>Nhà Xuất Bản Văn Học</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tsp">
+            <h3>Mô tả sản phẩm</h3>
+            <p>“Ước mơ của mẹ là gì?”</p>
+            <br />
+            <p>
+              “Thì cho chúng mày ăn học đàng hoàng, đầy đủ để mai sau đỡ khổ.”
+            </p>
+            <br />
+            <p>“Không, ước mơ khác cơ.”</p>
+            <br />
+            <p>“Không, ước mơ khác cơ.”</p>
+            <br />
+            <p>“Ước mơ dành riêng cho bản thân mẹ cơ mà.”</p>
+            <br />
+            <p>“MẸ THÌ LÀM GÌ CÓ ƯỚC MƠ.”</p>
+            <br />
+            <p>
+              Bạn có bao giờ hỏi ước mơ của bố mẹ là gì? Hoặc dù có hỏi bố mẹ
+              cũng chỉ trả lời qua loa như “Làm gì có…”. Nhưng bạn biết không,
+              làm gì có ai trên thế giới này không có ước mơ cơ chứ, chỉ là ước
+              mơ của bố mẹ chúng ta được cất giấu rất sâu trong tim và đánh đổi
+              bằng nụ cười của những đứa con mà thôi.
+            </p>
+            <br />
+            <p>
+              Tại sao mẹ lại chẳng có nổi một ước mơ cho riêng mình? Phải chăng
+              gánh vai mẹ đã quá mỏi mệt với cơm áo gạo tiền, với những bữa ăn
+              và học phí của con.
+            </p>
+            <br />
+            <p>
+              À không, mẹ có ước mơ đấy chứ. Mẹ ước mơ có một người bố, rồi mẹ
+              cho nó cả một gia đình. Mẹ ước mơ được tới trường, nên mẹ cho nó
+              học con chữ. Mẹ ước mơ được một bữa no, nên dẫu có phải đi làm vất
+              vả khổ cực đến đâu mẹ cũng cho nó được bữa cơm ngon. Chỉ khác một
+              điều, ước mơ của mẹ là các con mất rồi.
+            </p>
+            <br />
+            <p>
+              Đó là hình ảnh của MẸ mà bạn sẽ bắt gặp trong “Mẹ làm gì có ước
+              mơ”. Tựa một thước phim quay chậm đưa bạn trở lại những ngày bé
+              thơ, dưới vòng tay chai sạn nhưng đầy ấm áp của mẹ. Khi tạm cất
+              ước mơ của mình sang một bên, ước mơ của mẹ “hóa ra con từ bao
+              giờ” và “thế giới của mẹ chính là con”. Bố mẹ đã dồn hết khả năng
+              của mình, dành cho con những gì tốt nhất để con được thực hiện ước
+              mơ.
+            </p>
+            <br />
+            <p>
+              Chúng ta đừng chỉ mải chạy theo ước mơ của mình mà quên mất những
+              người đã hy sinh cả cuộc đời để mình có cơ hội thực hiện ước mơ
+              ấy. Có thể gọi điện về nhà thường xuyên hơn, hoặc nếu có thể, hãy
+              trở về nhà nếu đã đi đủ lâu. Đó là những điều mà Hạ Mer muốn gửi
+              gắm đến bạn qua “Mẹ làm gì có ước mơ”.
+            </p>
+            <br />
+            <p>
+              Hy vọng cuốn sách sẽ giúp bạn thêm trân quý từng khoảnh khắc bên
+              cạnh những người mà mình yêu thương
+            </p>
+          </div>
+        </main>
+        <aside class="buy">
+          <button class="buy-button" data-id="9">Mua hàng</button>
+          <button class="cart-button" onclick="addToCart(9)">
+            Thêm vào giỏ hàng
+          </button>
+        </aside>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <h3>Công Ty TNHH Cường Thành</h3>
+    <br />
+    <p>Tòa nhà 123, Phường ABC, Quận XYZ, Thành phố Hà Nội</p>
+    <br />
+    <p>
+      Giấy chứng nhận đăng ký doanh nghiệp số 0309544917 do Sở Kế Hoạch và Đầu
+      Tư Hà Nội cấp lần đầu vào ngày 17/10/2024
+    </p>
+    <br />
+    <p>Hotline: 1900 1234</p>
+  </footer>
+</html>

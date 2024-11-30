@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngôi Nhà Bên Bờ Biển Xanh Thẳm</title>
+    <link rel="stylesheet" href="http://localhost:5500/CSS/Style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="http://localhost:5500/JS/user.js"></script>
+    <script src="http://localhost:5500/JS/Script.js"></script>
+  </head>
+  <body>
+    <div class="head">
+      <a href="http://localhost:5500/HTML/Home.html" class="link-logo">
+        <span class="logo">Cường Thành</span>
+        <span class="logo books">Books</span>
+      </a>
+      <div class="head-menu">
+        <a href="http://localhost:5500/HTML/Home.html" class="link-icon">
+          <i class="fa-solid fa-house-chimney"></i>
+          Trang chủ
+        </a>
+        <a
+          href="http://localhost:5500/HTML/Login.html"
+          class="link-icon"
+          id="user-account"
+        >
+          <i class="fa-solid fa-user"></i>
+          Tài khoản
+        </a>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const userAccount = document.getElementById("user-account");
+            const username = localStorage.getItem("username");
+            if (username) {
+              userAccount.innerHTML = `
+                <div class="user-dropdown">
+                  <a href="#" class="link-icon" id="user-name">
+                    <i class="fa-solid fa-user"></i> ${username}
+                  </a>
+                  <div class="dropdown-account" id="dropdown-account">
+                    <a href="#" id="logout">Đăng xuất</a>
+                    <a href="http://localhost:5500/HTML/Cart.html" id="cart2">Giỏ hàng</a>
+                  </div>
+                </div>
+              `;
+              document
+                .getElementById("user-name")
+                .addEventListener("click", function (event) {
+                  event.preventDefault();
+                  const dropdownAccount =
+                    document.getElementById("dropdown-account");
+                  dropdownAccount.classList.toggle("show-menu");
+                });
+              document
+                .getElementById("logout")
+                .addEventListener("click", function (event) {
+                  event.preventDefault();
+                  localStorage.removeItem("username");
+                  userAccount.innerHTML = `
+                    <a href="http://localhost:5500/HTML/Login.html" class="link-icon">
+                      <i class="fa-solid fa-user"></i> Đăng nhập
+                    </a>
+                  `;
+                });
+            }
+          });
+        </script>
+      </div>
+    </div>
+    <hr class="headhr" />
+    <div class="content">
+      <div class="link-sp">
+        <a href="http://localhost:5500/HTML/Home.html">Trang chủ</a>
+        <p>&ensp;>&ensp;</p>
+        <a href="http://localhost:5500/HTML/STV.html">Sách Tiếng Việt</a>
+        <p>&ensp;>&ensp;</p>
+        <a href="http://localhost:5500/HTML/STV/SachVanHoc.html">
+          Sách văn học
+        </a>
+        <p>&ensp;>&ensp;</p>
+        <p>Ngôi Nhà Bên Bờ Biển Xanh Thẳm</p>
+      </div>
+      <div class="ctsp" style="height: 520px">
+        <aside class="img-tsp">
+          <img src="http://localhost:5500/Image/SP/6.webp" alt="" />
+          <dl>
+            <dt>Đặc điểm nổi bật</dt>
+            <dd>Nhận giải thưởng Alex Awards và RUSA Awards 2021.</dd>
+            <dd>
+              Được đánh giá là một trong những cuốn sách giả tưởng thú vị nhất.
+            </dd>
+            <dd>
+              Câu chuyện nhẹ nhàng, ngọt ngào và mang đến những bài học đời
+              thường.
+            </dd>
+          </dl>
+        </aside>
+        <main id="main">
+          <div class="tsp">
+            <h3>Ngôi Nhà Bên Bờ Biển Xanh Thẳm</h3>
+            <p>Tác giả: T.J.KLUNE</p>
+            <h2>
+              136.000 <sup><u>đ</u></sup>
+            </h2>
+            <p id="soldCount6" class="sCount">Đã bán: 0</p>
+          </div>
+          <div class="tsp">
+            <h3>Thông tin chi tiết</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="top">Công ty phát hành</td>
+                  <td class="top">Asbooks</td>
+                </tr>
+                <tr>
+                  <td>Ngày xuất bản</td>
+                  <td>30-04-2022</td>
+                </tr>
+                <tr>
+                  <td>Kích thước</td>
+                  <td>14 x 20.5 cm</td>
+                </tr>
+                <tr>
+                  <td>Loại bìa</td>
+                  <td>Bìa mềm</td>
+                </tr>
+                <tr>
+                  <td>Số trang</td>
+                  <td>3640</td>
+                </tr>
+                <tr>
+                  <td>Nhà xuất bản</td>
+                  <td>Nhà Xuất Bản Thế Giới</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tsp">
+            <h3>Mô tả sản phẩm</h3>
+            <p>
+              SLinus Baker là một nhân viên công tác xã hội làm việc tại Sở Phụ
+              Trách Thanh Thiếu Niên Nhiệm Màu. Anh nhận nhiệm vụ xác định
+              xemsáu đứa trẻ “trông có vẻ nguy hiểm” và đang sinh sống tại đảo
+              Marsyas liệu có khả năng mang đến ngày tận thế hay không.
+            </p>
+            <br />
+            <p>
+              Arthur Parnassus là chủ trại trẻ mồ côi. Anh là người yêu thương,
+              quan tâm và sẽ làm bất cứ điều gì để bọn trẻ được an toàn, ngay cả
+              khi điều đó có nghĩa là thế giới sẽ bùng cháy và những bí mật anh
+              muốn giấu kín bị phơi bày.
+            </p>
+          </div>
+          <div id="shadow"></div>
+        </main>
+        <aside class="buy">
+          <button class="buy-button" data-id="6">Mua hàng</button>
+          <button class="cart-button" onclick="addToCart(6)">
+            Thêm vào giỏ hàng
+          </button>
+        </aside>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <h3>Công Ty TNHH Cường Thành</h3>
+    <br />
+    <p>Tòa nhà 123, Phường ABC, Quận XYZ, Thành phố Hà Nội</p>
+    <br />
+    <p>
+      Giấy chứng nhận đăng ký doanh nghiệp số 0309544917 do Sở Kế Hoạch và Đầu
+      Tư Hà Nội cấp lần đầu vào ngày 17/10/2024
+    </p>
+    <br />
+    <p>Hotline: 1900 1234</p>
+  </footer>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trải Nghiệm Khách Hàng Xuất Sắc</title>
+    <link rel="stylesheet" href="http://localhost:5500/CSS/Style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="http://localhost:5500/JS/user.js"></script>
+    <script src="http://localhost:5500/JS/Script.js"></script>
+  </head>
+  <body>
+    <div class="head">
+      <a href="http://localhost:5500/HTML/Home.html" class="link-logo">
+        <span class="logo">Cường Thành</span>
+        <span class="logo books">Books</span>
+      </a>
+      <div class="head-menu">
+        <a href="http://localhost:5500/HTML/Home.html" class="link-icon">
+          <i class="fa-solid fa-house-chimney"></i>
+          Trang chủ
+        </a>
+        <a
+          href="http://localhost:5500/HTML/Login.html"
+          class="link-icon"
+          id="user-account"
+        >
+          <i class="fa-solid fa-user"></i>
+          Tài khoản
+        </a>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const userAccount = document.getElementById("user-account");
+            const username = localStorage.getItem("username");
+            if (username) {
+              userAccount.innerHTML = `
+                <div class="user-dropdown">
+                  <a href="#" class="link-icon" id="user-name">
+                    <i class="fa-solid fa-user"></i> ${username}
+                  </a>
+                  <div class="dropdown-account" id="dropdown-account">
+                    <a href="#" id="logout">Đăng xuất</a>
+                    <a href="http://localhost:5500/HTML/Cart.html" id="cart2">Giỏ hàng</a>
+                  </div>
+                </div>
+              `;
+              document
+                .getElementById("user-name")
+                .addEventListener("click", function (event) {
+                  event.preventDefault();
+                  const dropdownAccount =
+                    document.getElementById("dropdown-account");
+                  dropdownAccount.classList.toggle("show-menu");
+                });
+              document
+                .getElementById("logout")
+                .addEventListener("click", function (event) {
+                  event.preventDefault();
+                  localStorage.removeItem("username");
+                  userAccount.innerHTML = `
+                    <a href="http://localhost:5500/HTML/Login.html" class="link-icon">
+                      <i class="fa-solid fa-user"></i> Đăng nhập
+                    </a>
+                  `;
+                });
+            }
+          });
+        </script>
+      </div>
+    </div>
+    <hr class="headhr" />
+    <div class="content">
+      <div class="link-sp">
+        <a href="http://localhost:5500/HTML/Home.html">Trang chủ</a>
+        <p>&ensp;>&ensp;</p>
+        <a href="http://localhost:5500/HTML/STV.html">Sách Tiếng Việt</a>
+        <p>&ensp;>&ensp;</p>
+        <a href="http://localhost:5500/HTML/STV/SachKinhTe.html">
+          Sách kinh tế
+        </a>
+        <p>&ensp;>&ensp;</p>
+        <p>Trải Nghiệm Khách Hàng Xuất Sắc</p>
+      </div>
+      <div class="ctsp" style="height: 520px">
+        <aside class="img-tsp">
+          <img src="http://localhost:5500/Image/SP/5.webp" alt="" />
+          <dl>
+            <dt>Đặc điểm nổi bật</dt>
+            <dd>Kiến thức thực tế từ chuyên gia với 22 năm kinh nghiệm.</dd>
+            <dd>Kết hợp câu chuyện thực tế và nguyên lý quản trị.</dd>
+            <dd>
+              Chia thành 5 phần, từ năng lực cạnh tranh đến văn hóa khách hàng.
+            </dd>
+          </dl>
+        </aside>
+        <main id="main">
+          <div class="tsp">
+            <h3>Trải Nghiệm Khách Hàng Xuất Sắc</h3>
+            <h2>
+              200.000 <sup><u>đ</u></sup>
+            </h2>
+            <p id="soldCount5" class="sCount">Đã bán: 0</p>
+          </div>
+          <div class="tsp">
+            <h3>Thông tin chi tiết</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="top">Công ty phát hành</td>
+                  <td class="top">Saigon Books</td>
+                </tr>
+                <tr>
+                  <td>Ngày xuất bản</td>
+                  <td>15-09-2020</td>
+                </tr>
+                <tr>
+                  <td>Kích thước</td>
+                  <td>14 x 20.5 cm</td>
+                </tr>
+                <tr>
+                  <td>Loại bìa</td>
+                  <td>Bìa mềm</td>
+                </tr>
+                <tr>
+                  <td>Số trang</td>
+                  <td>344</td>
+                </tr>
+                <tr>
+                  <td>Nhà xuất bản</td>
+                  <td>Nhà Xuất Bản Thế Giới</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tsp">
+            <h3>Mô tả sản phẩm</h3>
+            <p>
+              Bạn đang cầm trên tay cuốn sách Trải nghiệm khách hàng xuất sắc
+              được viết từ hơn 22 năm kinh nghiệm, qua nhiều vị trí, môi
+              trườngkhác nhau của ông Nguyễn Dương, một chuyên gia cấp quốc tế,
+              một trong những người nhiệt huyết và chuyên sâu nhất về trải
+              nghiệm khách hàng.
+            </p>
+            <br />
+            <p>
+              Ngoài kinh nghiệm thực tế và kiến thức về quản trị nói chung và
+              quản trị trải nghiệm khách hàng nói riêng, trong quá trình hoàn
+              thành cuốn sách này, tác giả Nguyễn Dương đã thực hiện những đợt
+              đi nghiên cứu nhiều công ty, bao gồm những chuyến đi, những cuộc
+              nói chuyện, phỏng vấn, trao đổi, tìm hiểu và cập nhật cách mà
+              nhiều công ty đã thực hiện để có thể cung cấp những trải nghiệm
+              khách hàng tuyệt vời và tăng trưởng vượt bậc.
+            </p>
+          </div>
+          <div id="shadow"></div>
+        </main>
+        <aside class="buy">
+          <button class="buy-button" data-id="5">Mua hàng</button>
+          <button class="cart-button" onclick="addToCart(5)">
+            Thêm vào giỏ hàng
+          </button>
+        </aside>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <h3>Công Ty TNHH Cường Thành</h3>
+    <br />
+    <p>Tòa nhà 123, Phường ABC, Quận XYZ, Thành phố Hà Nội</p>
+    <br />
+    <p>
+      Giấy chứng nhận đăng ký doanh nghiệp số 0309544917 do Sở Kế Hoạch và Đầu
+      Tư Hà Nội cấp lần đầu vào ngày 17/10/2024
+    </p>
+    <br />
+    <p>Hotline: 1900 1234</p>
+  </footer>
+</html>
