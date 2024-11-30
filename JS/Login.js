@@ -13,7 +13,7 @@ document
     } else {
       alert("Đăng nhập thành công! Chào mừng trở lại " + username);
       updateUsername(username);
-      window.location.href = "http://localhost:5500/HTML/Home.html";
+      window.location.href = "../HTML/Home.html";
     }
 
     document.getElementById("loginForm").reset();
