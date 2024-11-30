@@ -13,7 +13,7 @@ document
     } else {
       alert("Đăng nhập thành công! Chào mừng trở lại " + username);
       updateUsername(username);
-      window.location.href = "../HTML/Home.html";
+      window.location.href = "https://nguyencuong23.github.io/nguyencuong/HTML/Home.html";
     }
 
     document.getElementById("loginForm").reset();
