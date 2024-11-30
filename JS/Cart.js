@@ -18,7 +18,7 @@ function loadCart() {
   const username = localStorage.getItem("username");
   if (!username) {
     alert("Vui lòng đăng nhập");
-    window.location.href = "http://localhost:5500/HTML/Login.html";
+    window.location.href = "https://nguyencuong23.github.io/nguyencuong/HTML/Home.html";
     return;
   }
   const cart = JSON.parse(localStorage.getItem("cart_" + username)) || [];
